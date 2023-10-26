@@ -1,6 +1,3 @@
-// Survey.js
-import React, { useState } from 'react';
-
 function Survey() {
   // Survey form code goes here
 
