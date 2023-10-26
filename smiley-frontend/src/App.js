@@ -23,7 +23,7 @@ function Header() {
 }
 
 function ErrorPage() {
-  return (<h1>Error! PLSLOG</h1>);
+  return (<h1>This Page Was Not Found</h1>);
 }
 
 const router = createBrowserRouter([
