@@ -1,16 +1,12 @@
 import './App.css';
 import React from 'react';
 import {
-  BrowserRouter,
-  createBrowserRouter,
   RouterProvider,
-  Routes,
-  Route
+  createBrowserRouter,
 } from 'react-router-dom';
 import Home from './routes/home';
 import About from './routes/about';
-import Survey from './routes/survey'; // Import the Survey component
-import Contact from './routes/survey';
+import Survey from './routes/survey';
 
 function Header() {
   return (
@@ -26,22 +22,24 @@ function Header() {
   );
 }
 
+function ErrorPage() {
+  return (<h1>Error! PLSLOG</h1>);
+}
+
+const router = createBrowserRouter([
+  { path: "/", element: <Home />, errorElement: <ErrorPage />,},
+  { path: "/home", element: <Home />, errorElement: <ErrorPage />,},
+  { path: "/about", element: <About />, errorElement: <ErrorPage />, },
+  { path: "/survey", element: <Survey />, errorElement: <ErrorPage />, },
+]);
 
 function App() {
   return (
     <React.StrictMode>
 	    <Header />
-	    <BrowserRouter>
-		    <Routes>
-		      <Route path='/' element={<Home/>} />
-		      <Route path='/about' element={<About/>} />                                        
-		      <Route path='/survey' element={<Survey />} />
-		      <Route path='/contact' element={<Contact />} />
-		    </Routes>
-	    </BrowserRouter>
+      <RouterProvider router={router} />
     </React.StrictMode>
   );
 }
 
 export default App;
-                                                                                                                                                               
