@@ -7,8 +7,10 @@ import {
 import Home from './routes/home.js';
 import About from './routes/about.js';
 import Survey from './routes/survey.js';
+import Toggle from './routes/toggle.js';
 import ContactUs from './routes/contact.js';
 import OptionsWheel from './components/options_modal.js';
+
 import './i18n.js';
 import { useTranslation } from 'react-i18next';
 
@@ -31,6 +33,9 @@ function Header() {
         <li><a href={`/survey`} className="App-header-nav-survey-element">
           {t('nav_survey_button')}
           </a></li>
+        <li><a href={`/toggle`}>
+          {t('Toggle')}
+        </a></li>  
         <li><a href={`/contact-us`}>
           {t('nav_contact_us_button')}
           </a></li>
@@ -50,6 +55,7 @@ const router = createBrowserRouter([
   { path: "/home", element: <Home />, errorElement: <ErrorPage />,},
   { path: "/about", element: <About />, errorElement: <ErrorPage />, },
   { path: "/survey", element: <Survey />, errorElement: <ErrorPage />, },
+  { path: "/toggle", element: <Toggle />, errorElement: <ErrorPage />, },
   { path: "/contact-us", element: <ContactUs />, errorElement: <ErrorPage />},
 ]);
 
