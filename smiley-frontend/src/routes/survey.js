@@ -8,8 +8,9 @@ function Survey() {
     setSelectedFeeling(event.target.value);
   };
 
+  //hey just tryoing 
   return (
-    <div className="survey">
+    <div className="survey"> 
       <h2>How are you feeling today?</h2>
       <form id="survey-form">
         <div className="form-group">
