@@ -26,16 +26,20 @@
   text-transform: uppercase; /* Convert text to uppercase */
   font-size: 16px; /* Adjust the font size to your preferred size */
 }
+
 body {
-  font-family: Helvetica;
+  font-family: Helvetica, Arial, sans-serif;
   margin: 0;
-  background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically center the content */
+  min-height: 100vh;
+  background-image: url("C:\\Users\\youss\\OneDrive\\Desktop\\Intel Force\\pexels-eberhard-grossgasteiger-1287145.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 a {
   text-decoration: none;
   color: #000;
