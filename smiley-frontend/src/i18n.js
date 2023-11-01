@@ -30,7 +30,7 @@ const resources = {
 
 
       choose: "Escoger...",
-      favoriteLanguage: "Idioma favorito",
+      language: "Idioma favorito",
       confirm: "Confirmar",
       cancel: "Close Dialog SPANISH",
       english: "Inglés",

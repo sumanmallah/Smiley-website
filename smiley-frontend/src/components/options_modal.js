@@ -35,7 +35,7 @@ const OptionsWheel = () => {
 
   return (
     <>
-      <button onClick={showDialog}>{t('showTheDialog')}</button>
+      <button id="settingsWheel" onClick={showDialog}>{t('showTheDialog')}</button>
       <dialog
         id="languageDialog"
         ref={dialogRef} // Attach the ref to the dialog element
@@ -53,7 +53,7 @@ const OptionsWheel = () => {
         }}
       >
         <label>
-          {t('favoriteLanguage')}:
+          {t('language')}:
           <select value={selectedLanguage} onChange={handleLanguageChange}>
             <option value="">{t('choose')}</option>
             <option value="en">English</option>
@@ -66,11 +66,13 @@ const OptionsWheel = () => {
           {t('cancel')}
         </button>
       </dialog>
+    </>
+  );
+  /*
       <output>
         {selectedLanguage ? `${t('youSelected')}: ${t(selectedLanguage)}` : ''}
       </output>
-    </>
-  );
+*/
 };
 
 export default OptionsWheel;
