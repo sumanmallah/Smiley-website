@@ -29,6 +29,12 @@
 body {
   font-family: Helvetica;
   margin: 0;
+  background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
 }
 a {
   text-decoration: none;
