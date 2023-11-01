@@ -10,7 +10,7 @@ function Survey() {
 
   //hey just tryoing 
   return (
-    <div className="survey"> 
+    <div className="survey" className="about-container"> 
       <h2>How are you feeling today?</h2>
       <form id="survey-form">
         <div className="form-group">
