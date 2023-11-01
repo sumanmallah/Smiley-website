@@ -47,3 +47,8 @@ a {
   justify-content: center;
   gap: 1em;
 }
+
+#languageDialog::backdrop {
+  background-color: gray;
+  opacity: 0.75;
+}
