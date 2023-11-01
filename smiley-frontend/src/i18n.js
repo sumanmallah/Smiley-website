@@ -8,6 +8,9 @@ const resources = {
       nav_about_button: 'About',
       nav_survey_button: 'Survey',
       nav_contact_us_button: 'Contact Us',
+      nav_toggle_button: 'Toggle',
+      nav_my_userdata_button: 'My Data',
+      page_not_found_message: 'Error 404: Page Not Found',
 
       choose: "Choose...",
       language: "Language: ",

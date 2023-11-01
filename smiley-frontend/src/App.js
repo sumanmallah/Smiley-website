@@ -30,8 +30,11 @@ function Header() {
           {t('nav_survey_button')}
           </a></li>
         <li><a href={`/toggle`}>
-          {t('Toggle')}
-        </a></li>  
+          {t('nav_toggle_button')}
+          </a></li>
+        <li><a href={`/me`}>
+          {t('nav_my_userdata_button')}
+          </a></li>
         <li><a href={`/contact-us`}>
           {t('nav_contact_us_button')}
           </a></li>
@@ -43,7 +46,7 @@ function Header() {
 
 function ErrorPage() {
   const { t } = useTranslation();
-  return (<h1>{t('404_page_message')}</h1>);
+  return (<h1>{t('page_not_found_message')}</h1>);
 }
 
 const router = createBrowserRouter([
