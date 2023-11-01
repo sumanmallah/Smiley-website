@@ -4,7 +4,6 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from 'react-router-dom';
-import Home from './routes/home.js';
 import About from './routes/about.js';
 import Survey from './routes/survey.js';
 import Toggle from './routes/toggle.js';
@@ -24,9 +23,6 @@ function Header() {
     <header className="App-header">
       <h1>Smiley Website :)</h1>
       <ul className="App-header-nav-links">
-        <li><a href={`/home`}>
-          {t('nav_home_button')}
-          </a></li>
         <li><a href={`/about`}>
           {t('nav_about_button')}
           </a></li>
@@ -51,8 +47,7 @@ function ErrorPage() {
 }
 
 const router = createBrowserRouter([
-  { path: "/", element: <Home />, errorElement: <ErrorPage />,},
-  { path: "/home", element: <Home />, errorElement: <ErrorPage />,},
+  { path: "/", element: <About />, errorElement: <ErrorPage />,},
   { path: "/about", element: <About />, errorElement: <ErrorPage />, },
   { path: "/survey", element: <Survey />, errorElement: <ErrorPage />, },
   { path: "/toggle", element: <Toggle />, errorElement: <ErrorPage />, },
