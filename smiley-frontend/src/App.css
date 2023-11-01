@@ -35,7 +35,7 @@ body {
   justify-content: center;
   align-items: center; /* Vertically center the content */
   min-height: 100vh;
-  background-image: url("C:\\Users\\youss\\OneDrive\\Desktop\\Intel Force\\pexels-eberhard-grossgasteiger-1287145.jpg");
+  background-image: url("https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?cs=srgb&dl=pexels-eberhard-grossgasteiger-1287145.jpg&fm=jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
