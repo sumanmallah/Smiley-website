@@ -9,7 +9,7 @@ import Survey from './routes/survey.js';
 import Toggle from './routes/toggle.js';
 import ContactUs from './routes/contact.js';
 import OptionsWheel from './components/options_modal.js';
-
+import AboutMyData from './routes/me.js';
 import './i18n.js';
 import { useTranslation } from 'react-i18next';
 
@@ -55,6 +55,7 @@ const router = createBrowserRouter([
   { path: "/survey", element: <Survey />, errorElement: <ErrorPage />, },
   { path: "/toggle", element: <Toggle />, errorElement: <ErrorPage />, },
   { path: "/contact-us", element: <ContactUs />, errorElement: <ErrorPage />},
+  { path: "/me", element: <AboutMyData />, errorElement: <ErrorPage />},
 ]);
 
 function App() {

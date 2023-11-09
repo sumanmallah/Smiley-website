@@ -18,7 +18,16 @@ function Survey() {
       age: formData.get('age'),
       feeling: selectedFeeling,
       comments: formData.get('comments'),
+      timestamp: new Date().toISOString(), // Adding a timestamp to each entry
     };
+    // get all previous survey responses, or a new empty list if it does not yet exist.
+    const existingLog = JSON.parse(localStorage.getItem('surveyLog')) || [];
+
+    // Append the new survey data to the log
+    existingLog.push(surveyData);
+
+    // Save the updated log back to localStorage
+    localStorage.setItem('surveyLog', JSON.stringify(existingLog));
     setSurveyResults(surveyData); // Update the state with the JSON - we will use this data for our calculations, or whatever. AI?
   };
 
