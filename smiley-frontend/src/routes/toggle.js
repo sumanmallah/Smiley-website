@@ -13,6 +13,7 @@ function Toggle() {
   };
 
   return (
+    <div className="about-container">
     <div className={`color_change ${isColorBlindMode ? 'color-blind' : ''}`}>
       <label htmlFor="toggle-button">Toggle Color</label>
       <input type="checkbox" id="toggle-button" onClick={handleToggleButtonClick} />
@@ -20,6 +21,7 @@ function Toggle() {
       <button onClick={toggleColorMode}>
         {isColorBlindMode ? 'Color Blind Mode' : 'Normal Mode'}
       </button>
+    </div>
     </div>
   );
 }
