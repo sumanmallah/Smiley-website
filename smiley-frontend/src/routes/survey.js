@@ -2,17 +2,31 @@ import React, { useState } from 'react';
 import '../css/survey.css';
 function Survey() {
   const [selectedFeeling, setSelectedFeeling] = useState('');
+  const [surveyResults, setSurveyResults] = useState({});
   const feelings = ['Happy', 'Sad', 'Worried', 'Feeling Low', 'Excited'];
 
   const handleFeelingChange = (event) => {
     setSelectedFeeling(event.target.value);
   };
 
-  //hey just tryoing 
+  const handleSubmit = (event) => {
+    event.preventDefault(); // This prevents the default form submission
+    const formData = new FormData(event.target);
+    const surveyData = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      age: formData.get('age'),
+      feeling: selectedFeeling,
+      comments: formData.get('comments'),
+    };
+    setSurveyResults(surveyData); // Update the state with the JSON - we will use this data for our calculations, or whatever. AI?
+  };
+
+  //hey just trying 
   return (
     <div className="survey" className="about-container"> 
       <h2>How are you feeling today?</h2>
-      <form id="survey-form">
+      <form id="survey-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" name="name" required />
@@ -44,7 +58,7 @@ function Survey() {
 
         <button type="submit">Submit</button>
       </form>
-      <p>You selected: {selectedFeeling}</p>
+      <pre>{JSON.stringify(surveyResults, null, 2)}</pre>
     </div>
   );
 }

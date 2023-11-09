@@ -50,3 +50,9 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+#survey-form {
+  display: flow;
+  align-items: center;
+  text-align: center;
+}
