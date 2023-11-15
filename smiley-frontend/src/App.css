@@ -34,9 +34,10 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  background-image: url("https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?cs=srgb&dl=pexels-eberhard-grossgasteiger-1287145.jpg&fm=jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  /*background-image: url("https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?cs=srgb&dl=pexels-eberhard-grossgasteiger-1287145.jpg&fm=jpg");*/
+  background: linear-gradient(to bottom left, #c3f5a6, #ABFF0F);
+  background-size: 200% 200%;
+  
 }
 
 a {
