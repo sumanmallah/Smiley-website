@@ -9,7 +9,7 @@ import Survey from './routes/survey.js';
 import Toggle from './routes/toggle.js';
 import ContactUs from './routes/contact.js';
 import OptionsWheel from './components/options_modal.js';
-import AboutMyData from './routes/me.js';
+import AboutMyData from './routes/calendar.js';
 import './i18n.js';
 import { useTranslation } from 'react-i18next';
 
