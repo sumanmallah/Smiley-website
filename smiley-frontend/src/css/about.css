@@ -4,29 +4,43 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-}
-
-h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
 }
 
-h2 {
+#about-header {
+  color: #4CAF50;
+  text-align: center;
+  font-size: 2.5em;
+  background: aqua;
+  position: absolute; /* or 'absolute' depending on your layout needs */
+  left: 0;
+  width: 100vw;
+}
+
+
+#welcome-text {
+  font-style: italic;
   color: #555;
+  padding-top: 4rem;
 }
 
-h3 {
-  color: #777;
+#purpose-header,
+#offer-header,
+#team-header {
+  color: #4CAF50;
+  margin-top: 20px;
+  font-size: 2em; /* Adjusted font size for sub-headers */
 }
 
-p {
-  color: #333;
-  margin-bottom: 15px;
+#purpose-text,
+#offer-text,
+#team-text {
+  line-height: 1.5;
 }
 
-strong {
-  color: #0066cc;
+#offer-text strong {
+  color: #4CAF50;
 }
 
 /* Add more styles as needed */
