@@ -70,3 +70,11 @@ a {
   top: 10px;
   right: 10px;
 }
+/* In your CSS file (e.g., footer.css) */
+.footer {
+  background-color: aquamarine; /* Background color */
+  color: #fff; /* Text color */
+  text-align: center; /* Center-align text */
+  padding: 10px; /* Add padding for spacing */
+}
+

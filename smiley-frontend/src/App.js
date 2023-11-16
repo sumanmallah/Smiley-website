@@ -63,6 +63,10 @@ function App() {
     <React.StrictMode>
 	    <Header />
       <RouterProvider router={router} />
+      <footer className="footer">
+      <small>This is our footer; we will add more to it soon</small>
+      </footer>
+
     </React.StrictMode>
   );
 }
