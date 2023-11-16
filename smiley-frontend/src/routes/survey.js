@@ -1,16 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/survey.css';
+
 function Survey() {
   const [selectedFeeling, setSelectedFeeling] = useState('');
   const [surveyResults, setSurveyResults] = useState({});
+  const [dynamicMessage, setDynamicMessage] = useState('');
   const feelings = ['Happy', 'Sad', 'Worried', 'Feeling Low', 'Excited'];
+
+  useEffect(() => {
+    switch (selectedFeeling) {
+      case 'Happy':
+        setDynamicMessage('Great to hear you are feeling happy!');
+        break;
+      case 'Sad':
+        setDynamicMessage('We are here for you during tough times.');
+        break;
+      case 'Worried':
+        setDynamicMessage('It can be tough, but worrying is a part of life.');
+        break;
+      case 'Feeling Low':
+        setDynamicMessage('Remember, after the rain comes a rainbow.');
+        break;
+      case 'Excited':
+        setDynamicMessage('Excitement is contagious, spread it around!');
+        break;
+      default:
+        setDynamicMessage('');
+    }
+  }, [selectedFeeling]);
 
   const handleFeelingChange = (event) => {
     setSelectedFeeling(event.target.value);
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault(); // This prevents the default form submission
+    event.preventDefault();
     const formData = new FormData(event.target);
     const surveyData = {
       name: formData.get('name'),
@@ -18,23 +42,19 @@ function Survey() {
       age: formData.get('age'),
       feeling: selectedFeeling,
       comments: formData.get('comments'),
-      timestamp: new Date().toISOString(), // Adding a timestamp to each entry
+      timestamp: new Date().toISOString(),
     };
-    // get all previous survey responses, or a new empty list if it does not yet exist.
+
     const existingLog = JSON.parse(localStorage.getItem('surveyLog')) || [];
-
-    // Append the new survey data to the log
     existingLog.push(surveyData);
-
-    // Save the updated log back to localStorage
     localStorage.setItem('surveyLog', JSON.stringify(existingLog));
-    setSurveyResults(surveyData); // Update the state with the JSON - we will use this data for our calculations, or whatever. AI?
+    setSurveyResults(surveyData);
   };
 
-  //hey just trying 
   return (
-    <div className="survey" className="about-container"> 
+    <div className="survey-container">
       <h2>How are you feeling today?</h2>
+      {dynamicMessage && <p className="dynamic-message">{dynamicMessage}</p>}
       <form id="survey-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
@@ -54,6 +74,7 @@ function Survey() {
         <div className="form-group">
           <label htmlFor="feeling">How are you feeling today?</label>
           <select id="feeling" name="feeling" value={selectedFeeling} onChange={handleFeelingChange}>
+            <option value="">--Please choose an option--</option>
             {feelings.map((feeling, index) => (
               <option key={index} value={feeling}>{feeling}</option>
             ))}
@@ -67,7 +88,12 @@ function Survey() {
 
         <button type="submit">Submit</button>
       </form>
-      <pre>{JSON.stringify(surveyResults, null, 2)}</pre>
+      {Object.keys(surveyResults).length > 0 && (
+        <div className="survey-results">
+          <h3>Survey Results:</h3>
+          <pre>{JSON.stringify(surveyResults, null, 2)}</pre>
+        </div>
+      )}
     </div>
   );
 }

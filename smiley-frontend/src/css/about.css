@@ -43,4 +43,67 @@
   color: #4CAF50;
 }
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Initial state for animating elements: hidden and positioned */
+#about-header,
+#welcome-text,
+#purpose-header,
+#purpose-text,
+#offer-header,
+#offer-text,
+#team-header,
+#team-text {
+  visibility: hidden;  /* Hide elements initially */
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* Apply animation with different delays */
+#about-header {
+  animation: 1s ease-out 0s 1 slideInFromLeft forwards;
+}
+
+#welcome-text {
+  animation: 1s ease-out 0.5s 1 slideInFromLeft forwards;
+}
+
+#purpose-header {
+  animation: 1s ease-out 1s 1 slideInFromLeft forwards;
+}
+
+#purpose-text {
+  animation: 1s ease-out 1.5s 1 slideInFromLeft forwards;
+}
+
+#offer-header {
+  animation: 1s ease-out 2s 1 slideInFromLeft forwards;
+}
+
+#offer-text {
+  animation: 1s ease-out 2.5s 1 slideInFromLeft forwards;
+}
+
+#team-header {
+  animation: 1s ease-out 3s 1 slideInFromLeft forwards;
+}
+
+#team-text {
+  animation: 1s ease-out 3.5s 1 slideInFromLeft forwards;
+}
+
 /* Add more styles as needed */
