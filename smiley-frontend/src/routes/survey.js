@@ -4,8 +4,12 @@ import '../css/survey.css';
 function Survey() {
   const [selectedFeeling, setSelectedFeeling] = useState('');
   const [surveyResults, setSurveyResults] = useState({});
+<<<<<<< HEAD
   const [dynamicMessage, setDynamicMessage] = useState('');
   const feelings = ['Happy', 'Sad', 'Worried', 'Feeling Low', 'Excited'];
+=======
+  const feelings = ['', 'Happy', 'Sad', 'Worried', 'Feeling Low', 'Excited'];
+>>>>>>> 6b7756de54e77877bae33935530492e120c1f125
 
   useEffect(() => {
     switch (selectedFeeling) {
