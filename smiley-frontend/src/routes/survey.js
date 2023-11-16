@@ -3,7 +3,7 @@ import '../css/survey.css';
 function Survey() {
   const [selectedFeeling, setSelectedFeeling] = useState('');
   const [surveyResults, setSurveyResults] = useState({});
-  const feelings = ['Happy', 'Sad', 'Worried', 'Feeling Low', 'Excited'];
+  const feelings = ['', 'Happy', 'Sad', 'Worried', 'Feeling Low', 'Excited'];
 
   const handleFeelingChange = (event) => {
     setSelectedFeeling(event.target.value);
