@@ -21,7 +21,7 @@ function Header() {
   /* t() translates using a hashmap for each language essentially. works automagically */
   return (
     <header className="App-header">
-      <h1>Smiley Website :)</h1>
+      <h1>Welcome to Smiley Website :)</h1>
       <ul className="App-header-nav-links">
         <li><a href={`/about`}>
           {t('nav_about_button')}

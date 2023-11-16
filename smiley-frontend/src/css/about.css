@@ -6,9 +6,13 @@
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
+  padding: 0;
+
 }
 
 #about-header {
+  margin-top: 0;
+  padding-top: 0;
   color: #4CAF50;
   text-align: center;
   font-size: 2.5em;
