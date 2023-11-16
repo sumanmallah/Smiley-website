@@ -63,7 +63,7 @@ a {
   background: aqua;
   width: 100vw;
   list-style: none;
-  padding: 0;
+  padding: 10px;
   margin: 0;
   display: flex;
   justify-content: center;
