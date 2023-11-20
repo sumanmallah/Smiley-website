@@ -69,8 +69,6 @@ a {
   z-index: 1000; /* Ensure it's above other content */
 }
 
-
-
 .App-header-nav-links a:hover {
   text-decoration: underline;
   background: aqua;
@@ -110,4 +108,14 @@ a {
 .MyAwesomeRootElementClassName {
   position: relative;
   min-height: 100vh;
+}
+#awesomeCaptureImageButton {
+  margin-top: 10px;
+  height: 3rem;
+  width: 20rem;
+  justify-self: center;
+}
+
+.survey-container div video {
+  justify-self: center;
 }
