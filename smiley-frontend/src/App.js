@@ -9,6 +9,7 @@ import Survey from './routes/survey.js';
 import ContactUs from './routes/contact.js';
 import OptionsWheel from './components/options_modal.js';
 import AboutMyData from './routes/calendar.js';
+import SurveyEthan1 from './routes/survey-ethan1.js';
 import './i18n.js';
 import { useTranslation } from 'react-i18next';
 
@@ -34,6 +35,9 @@ function Header() {
         <li><a href={`/contact-us`}>
           {t('nav_contact_us_button')}
           </a></li>
+        <li><a href={`/survey-m2`}>
+          {t('nav_survey_ethan1_button')}
+          </a></li>
       </ul>
       <OptionsWheel />
     </header>
@@ -51,6 +55,7 @@ const router = createBrowserRouter([
   { path: "/survey", element: <Survey />, errorElement: <ErrorPage />, },
   { path: "/contact-us", element: <ContactUs />, errorElement: <ErrorPage />},
   { path: "/me", element: <AboutMyData />, errorElement: <ErrorPage />},
+  { path: "/survey-m2", element: <SurveyEthan1 />, errorElement: <ErrorPage />},
 ]);
 
 function App() {
