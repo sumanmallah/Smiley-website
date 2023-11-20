@@ -6,7 +6,6 @@ import {
 } from 'react-router-dom';
 import About from './routes/about.js';
 import Survey from './routes/survey.js';
-import Toggle from './routes/toggle.js';
 import ContactUs from './routes/contact.js';
 import OptionsWheel from './components/options_modal.js';
 import AboutMyData from './routes/calendar.js';
@@ -29,9 +28,6 @@ function Header() {
         <li><a href={`/survey`} className="App-header-nav-survey-element">
           {t('nav_survey_button')}
           </a></li>
-        <li><a href={`/toggle`}>
-          {t('nav_toggle_button')}
-          </a></li>
         <li><a href={`/me`}>
           {t('nav_my_userdata_button')}
           </a></li>
@@ -53,7 +49,6 @@ const router = createBrowserRouter([
   { path: "/", element: <About />, errorElement: <ErrorPage />,},
   { path: "/about", element: <About />, errorElement: <ErrorPage />, },
   { path: "/survey", element: <Survey />, errorElement: <ErrorPage />, },
-  { path: "/toggle", element: <Toggle />, errorElement: <ErrorPage />, },
   { path: "/contact-us", element: <ContactUs />, errorElement: <ErrorPage />},
   { path: "/me", element: <AboutMyData />, errorElement: <ErrorPage />},
 ]);
