@@ -98,7 +98,6 @@ a {
   text-align: center; /* Center-align text */
   padding: 10px; /* Add padding for spacing */
   bottom: 0;
-  position: absolute;
   width: 100%;
   height: 2.5rem;
 }
