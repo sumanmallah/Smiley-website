@@ -9,6 +9,7 @@
 }
 .loading-objects-container {
   display: flex;
+  justify-content: center;
 }
 
 .line {

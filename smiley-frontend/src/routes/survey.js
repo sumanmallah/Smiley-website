@@ -4,7 +4,6 @@ import '../css/survey.css';
 function Survey() {
   const [selectedFeeling, setSelectedFeeling] = useState('');
   const [customFeeling, setCustomFeeling] = useState('');
-  const [surveyResults, setSurveyResults] = useState({});
   const feelings = ['Happy', 'Sad', 'Worried', 'Feeling Low', 'Excited', 'Other'];
 
   const handleFeelingChange = (event) => {
@@ -37,7 +36,6 @@ function Survey() {
     const existingLog = JSON.parse(localStorage.getItem('surveyLog')) || [];
     existingLog.push(surveyData);
     localStorage.setItem('surveyLog', JSON.stringify(existingLog));
-    setSurveyResults(surveyData);
   };
 
   return (
@@ -82,7 +80,6 @@ function Survey() {
 
         <button type="submit">Submit</button>
       </form>
-      {/* Displaying survey results */}
     </div>
   );
 }

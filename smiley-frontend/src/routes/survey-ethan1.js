@@ -40,6 +40,18 @@ function Survey() {
   const onCapture = async (result) => {
     console.log(result)
     setEmotionResult(result);
+
+
+    const surveyData = {
+      feeling: result?.face[0].emotion[0].emotion || "Unknown",
+      detectionResult: result,
+      timestamp: new Date().toISOString(),
+    };
+
+    const existingLog = JSON.parse(localStorage.getItem('surveyLog')) || [];
+    existingLog.push(surveyData);
+    localStorage.setItem('surveyLog', JSON.stringify(existingLog));
+
     setTimeout(() => {
       setStep('result');
     }, 2000); // Simulate a loading time, it only takes like 0.1s to actually process lol
@@ -62,7 +74,7 @@ function Survey() {
   //};
 
   return (
-    <div className="survey-container">
+    <div className="survey-container" style={{'text-align': 'center'}}>
       {step === 'camera' && (
         <CameraComponent onBeginCapture={onBeginCapture} onCapture={onCapture} />
       )}
