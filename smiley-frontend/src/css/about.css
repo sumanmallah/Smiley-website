@@ -129,4 +129,59 @@
   color: #ddd; /* Lighter text color for regular text in dark mode */
 }
 
-/* Add more styles as needed */
+.dark-mode .about-container {
+  color: white; /* Change text color for dark mode */
+}
+
+.dark-mode #about-header,
+.dark-mode #purpose-header,
+.dark-mode #offer-header,
+.dark-mode #team-header {
+  color: #be2cbc; /* Different color for headers in dark mode */
+}
+
+.dark-mode #welcome-text,
+.dark-mode #purpose-text,
+.dark-mode #offer-text,
+.dark-mode #team-text {
+  color: #ddd; /* Lighter text color for regular text in dark mode */
+}
+
+/* Add this to your about.css file */
+/* CSS animation for fading in images */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Optionally, you can add a vertical translation */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to your image elements */
+.small-image {
+  width: 550px;
+  height: 495px;
+  opacity: 0; /* Start with the image hidden */
+  animation: fadeIn 1s ease-out forwards; /* Apply the fade-in animation */
+}
+
+/* Simplified CSS animation for fading in the image */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply the animation directly to the "img" element */
+img.image1 {
+  opacity: 0; /* Start with the image hidden */
+  animation: fadeIn 1s ease-out forwards; /* Apply the fade-in animation */
+}
+
+

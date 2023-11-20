@@ -65,6 +65,9 @@ const OptionsWheel = () => {
         <button type="button" onClick={closeDialog}>
           {t('cancel')}
         </button>
+        <button onClick={toggleDarkMode}>
+            {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+          </button>
       </dialog>
     </>
   );
