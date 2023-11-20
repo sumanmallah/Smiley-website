@@ -6,10 +6,10 @@ import {
 } from 'react-router-dom';
 import About from './routes/about.js';
 import Survey from './routes/survey.js';
-import Toggle from './routes/toggle.js';
 import ContactUs from './routes/contact.js';
 import OptionsWheel from './components/options_modal.js';
 import AboutMyData from './routes/calendar.js';
+import SurveyEthan1 from './routes/survey-ethan1.js';
 import './i18n.js';
 import { useTranslation } from 'react-i18next';
 
@@ -28,14 +28,14 @@ function Header() {
         <li><a href={`/survey`} className="App-header-nav-survey-element">
           {t('nav_survey_button')}
           </a></li>
-        <li><a href={`/toggle`}>
-          {t('nav_toggle_button')}
-          </a></li>
         <li><a href={`/me`}>
           {t('nav_my_userdata_button')}
           </a></li>
         <li><a href={`/contact-us`}>
           {t('nav_contact_us_button')}
+          </a></li>
+        <li><a href={`/survey-m2`}>
+          {t('nav_survey_ethan1_button')}
           </a></li>
       </ul>
       <img src="stay-happy-high-resolution-logo-transparent.png" className="app-logo-awesome" style={{width: "40px", height: "40px"}} />
@@ -53,9 +53,9 @@ const router = createBrowserRouter([
   { path: "/", element: <About />, errorElement: <ErrorPage />,},
   { path: "/about", element: <About />, errorElement: <ErrorPage />, },
   { path: "/survey", element: <Survey />, errorElement: <ErrorPage />, },
-  { path: "/toggle", element: <Toggle />, errorElement: <ErrorPage />, },
   { path: "/contact-us", element: <ContactUs />, errorElement: <ErrorPage />},
   { path: "/me", element: <AboutMyData />, errorElement: <ErrorPage />},
+  { path: "/survey-m2", element: <SurveyEthan1 />, errorElement: <ErrorPage />},
 ]);
 
 function App() {

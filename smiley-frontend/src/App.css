@@ -48,7 +48,7 @@ a {
 .App-header-nav-links {
   width: 100vw;
   list-style: none;
-  padding: 0;
+  padding: 7px;
   margin: 0;
   display: flex;
   justify-content: center;
