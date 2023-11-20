@@ -110,4 +110,41 @@
   animation: 1s ease-out 3.5s 1 slideInFromLeft forwards;
 }
 
-/* Add more styles as needed */
+/* Add this to your about.css file */
+/* CSS animation for fading in images */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Optionally, you can add a vertical translation */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to your image elements */
+.small-image {
+  width: 550px;
+  height: 495px;
+  opacity: 0; /* Start with the image hidden */
+  animation: fadeIn 1s ease-out forwards; /* Apply the fade-in animation */
+}
+
+/* Simplified CSS animation for fading in the image */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply the animation directly to the "img" element */
+img.image1 {
+  opacity: 0; /* Start with the image hidden */
+  animation: fadeIn 1s ease-out forwards; /* Apply the fade-in animation */
+}
+
+

@@ -17,7 +17,8 @@ function About() {
         boost your motivation, and ultimately lead a more fulfilling and positive life. We believe that every emotion,
         even the challenging ones, has value and can be a stepping stone towards personal growth.
       </p>
-
+      <img className="image1" alt="a pic" src="https://miro.medium.com/v2/resize:fit:490/1*lTdwhTFJppOBiA6V-Ygyqg.png" />
+      <img className="small-image" alt="a yoga pic" src="https://caffeyoga.com/wp-content/uploads/2016/01/beach-yoga1.jpg" />
       <h3 id="offer-header">What We Offer</h3>
       <p id="offer-text">
         <strong>Emotional Guidance:</strong> Smiley offers a range of tools and resources to help you better understand and manage your emotions. Whether you're feeling happy, sad, worried, or anything in between, we're here to guide you.

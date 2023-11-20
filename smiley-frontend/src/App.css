@@ -45,22 +45,7 @@ a {
   color: #000;
 }
 
-/* Add these styles to your CSS to style the header text */
-.App-header h1 {
-  text-align: center;
-  font-size: 4em; /* Adjust the font size to make it bigger */
-  font-weight: bold; /* Make the text bold */
-  color: #3e1686; /* Change the text color to your preferred color */
-  font-style: italic;
-  margin: 0;
-  margin-top: .1em;
-  margin-bottom: .2em;
-  /* You can add more styles like text-shadow, background-color, etc. for a good style */
-}
-
-
 .App-header-nav-links {
-  background: aqua;
   width: 100vw;
   list-style: none;
   padding: 0;
@@ -68,10 +53,25 @@ a {
   display: flex;
   justify-content: center;
   gap: 1em;
+  font-size: 30px;
 }
+.App-header {
+  display: flex;
+  justify-content: space-between; /* Push items to both left and right sides */
+  align-items: center;
+  padding-top: 10px; /* Adjust the top padding as needed */
+  padding-bottom: 10px; /* Adjust the bottom padding as needed */
+  width: 100%; /* Full width */
+  background-color: lightgreen; /* Background color */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+
 
 .App-header-nav-links a:hover {
   text-decoration: underline;
+  background: aqua;
+
 }
 
 #languageDialog::backdrop {
@@ -83,6 +83,12 @@ a {
   position: fixed;
   top: 10px;
   right: 10px;
+}
+
+.app-logo-awesome {
+  position: fixed;
+  top: 10px;
+  left: 10px;
 }
 /* In your CSS file (e.g., footer.css) */
 .footer {
