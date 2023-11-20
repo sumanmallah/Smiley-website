@@ -93,6 +93,7 @@ a {
 
 /* In your CSS file (e.g., footer.css) */
 .footer {
+  position: static;
   background-color: black; /* Background color */
   color: #fff; /* Text color */
   text-align: center; /* Center-align text */
