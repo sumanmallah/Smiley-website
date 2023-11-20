@@ -1,0 +1,47 @@
+/* contact.css */
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px; /* Adjust the width as needed */
+    background-color: #fff; /* White background for the form */
+    padding: 20px; /* Padding around the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding some shadow for depth */
+    margin-top: -100px; /* Optional: Adjusts the form position */
+  }
+  
+  .contact-form div {
+    margin-bottom: 15px; /* Spacing between form fields */
+  }
+  
+  .contact-form button {
+    cursor: pointer; /* Optional: style the button */
+    background-color: #4CAF50; /* Example button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #367c39; /* Darker shade on hover */
+  }
+  
+  
+  .contact-form button {
+    cursor: pointer; /* Optional: style the button */
+  }
+  

@@ -1,5 +1,5 @@
 import './App.css';
-import React,{useState, useEffect} from 'react';
+import React from 'react';
 import {
   RouterProvider,
   createBrowserRouter,
@@ -14,7 +14,7 @@ import './i18n.js';
 import { useTranslation } from 'react-i18next';
 
 
-function Header({toggleDarkMode, isDarkMode}) {
+function Header() {
     const { t, i18n } = useTranslation();
   console.log('Current language:', i18n.language); // Log the current language
 
@@ -60,22 +60,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  // Dark mode state
-  const [isDarkMode, setIsDarkMode] = useState(
-    localStorage.getItem('darkMode') === 'true');
 
-  useEffect(() => {
-    localStorage.setItem('darkMode', isDarkMode);
-    if (isDarkMode) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
-    }
-  }, [isDarkMode]);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
   return (
     <React.StrictMode>
 	    <Header />
