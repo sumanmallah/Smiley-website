@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import {
   RouterProvider,
   createBrowserRouter,
@@ -13,7 +13,7 @@ import './i18n.js';
 import { useTranslation } from 'react-i18next';
 
 
-function Header() {
+function Header({toggleDarkMode, isDarkMode}) {
     const { t, i18n } = useTranslation();
   console.log('Current language:', i18n.language); // Log the current language
 
@@ -34,6 +34,9 @@ function Header() {
         <li><a href={`/contact-us`}>
           {t('nav_contact_us_button')}
           </a></li>
+          <li><button onClick={toggleDarkMode}>
+            {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+          </button></li>
       </ul>
       <OptionsWheel />
     </header>
@@ -54,9 +57,25 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  // Dark mode state
+  const [isDarkMode, setIsDarkMode] = useState(
+    localStorage.getItem('darkMode') === 'true');
+
+  useEffect(() => {
+    localStorage.setItem('darkMode', isDarkMode);
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [isDarkMode]);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
   return (
     <React.StrictMode>
-	    <Header />
+      <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       <RouterProvider router={router} />
       <footer className="footer">
       <small>This is our footer; we will add more to it soon</small>

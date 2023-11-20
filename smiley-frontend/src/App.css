@@ -1,3 +1,7 @@
+.dark-mode {
+  background-color: black;
+  color:white;
+}
 .top-bar {
   display: flex;
   justify-content: space-between;
@@ -91,4 +95,5 @@ a {
   text-align: center; /* Center-align text */
   padding: 10px; /* Add padding for spacing */
 }
+
 
