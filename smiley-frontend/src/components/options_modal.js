@@ -32,6 +32,22 @@ const OptionsWheel = () => {
     setSelectedLanguage(newLanguage);
     i18n.changeLanguage(newLanguage);
   };
+  // Dark mode state
+  const [isDarkMode, setIsDarkMode] = useState(
+    localStorage.getItem('darkMode') === 'true');
+
+  useEffect(() => {
+    localStorage.setItem('darkMode', isDarkMode);
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [isDarkMode]);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
 
   return (
     <>
@@ -65,7 +81,7 @@ const OptionsWheel = () => {
         <button type="button" onClick={closeDialog}>
           {t('cancel')}
         </button>
-        <button onClick={toggleDarkMode}>
+         <button onClick={toggleDarkMode}>
             {isDarkMode ? 'Light Mode' : 'Dark Mode'}
           </button>
       </dialog>

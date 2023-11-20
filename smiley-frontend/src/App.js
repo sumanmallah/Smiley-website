@@ -36,15 +36,9 @@ function Header({toggleDarkMode, isDarkMode}) {
         <li><a href={`/contact-us`}>
           {t('nav_contact_us_button')}
           </a></li>
-<<<<<<< HEAD
-          <li><button onClick={toggleDarkMode}>
-            {isDarkMode ? 'Light Mode' : 'Dark Mode'}
-          </button></li>
-=======
         <li><a href={`/survey-m2`}>
           {t('nav_survey_ethan1_button')}
           </a></li>
->>>>>>> b05629a02d997f82f6e8385fcea8182063dcd5cc
       </ul>
       <OptionsWheel />
     </header>
@@ -84,13 +78,8 @@ function App() {
   };
   return (
     <React.StrictMode>
-<<<<<<< HEAD
-      <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-      <RouterProvider router={router} />
-=======
 	    <Header />
-      <RouterProvider router={router} className="router-app-content-wrap" />
->>>>>>> b05629a02d997f82f6e8385fcea8182063dcd5cc
+      <RouterProvider router={router} />
       <footer className="footer">
         <small>This is our footer; we will add more to it soon</small>
       </footer>
