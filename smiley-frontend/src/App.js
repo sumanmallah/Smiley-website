@@ -21,6 +21,8 @@ function Header() {
   /* t() translates using a hashmap for each language essentially. works automagically */
   return (
     <header className="App-header">
+            <img src="stay-happy-high-resolution-logo-transparent.png" className="app-logo-awesome" style={{width: "125px", height: "70px"}} />
+
       <ul className="App-header-nav-links">
         <li><a href={`/about`}>
           {t('nav_about_button')}
@@ -38,7 +40,6 @@ function Header() {
           {t('nav_survey_ethan1_button')}
           </a></li>
       </ul>
-      <img src="stay-happy-high-resolution-logo-transparent.png" className="app-logo-awesome" style={{width: "40px", height: "40px"}} />
       <OptionsWheel />
     </header>
   );
