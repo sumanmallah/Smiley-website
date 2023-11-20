@@ -92,7 +92,7 @@ a {
 /* In your CSS file (e.g., footer.css) */
 .footer {
   position: static;
-  background-color: black; /* Background color */
+  background-color: lightgreen; /* Background color */
   color: #fff; /* Text color */
   text-align: center; /* Center-align text */
   padding: 10px; /* Add padding for spacing */
