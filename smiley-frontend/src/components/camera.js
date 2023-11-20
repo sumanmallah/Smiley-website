@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import Human from '@vladmandic/human';
-
   const human = new Human({
     backend: 'webgl',
     segmentation: { enabled: true },
@@ -14,7 +13,7 @@ import Human from '@vladmandic/human';
   });
 
 
-function CameraComponent({ onCapture }) {
+function CameraComponent({ onCapture, onBeginCapture }) {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -28,14 +27,15 @@ function CameraComponent({ onCapture }) {
   }, []);
 
   const captureEmotion = async () => {
+    onBeginCapture();
     const result = await human.detect(videoRef.current);
     onCapture(result);
   };
 
   return (
-    <div>
+    <div style={{display: 'grid'}}>
       <video ref={videoRef} autoPlay></video>
-      <button onClick={captureEmotion}>Capture Emotion</button>
+      <button onClick={captureEmotion} id="awesomeCaptureImageButton">Capture Emotion</button>
     </div>
   );
 }
