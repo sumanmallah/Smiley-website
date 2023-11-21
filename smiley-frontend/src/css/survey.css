@@ -1,10 +1,34 @@
+/* Define default light mode colors */
+:root {
+  --text-color: #333; /* Dark color for light mode */
+  --background-color: #e6f7e6; /* Light green background */
+  --button-bg-color: #f8f8f8; /* Light color for buttons */
+  --button-text-color: #333; /* Dark text color for buttons */
+}
+
+/* Detect dark mode preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #ddd; /* Light color for dark mode */
+    --background-color: #333; /* Darker background for dark mode */
+    --button-bg-color: #444; /* Dark color for buttons in dark mode */
+    --button-text-color: #fff; /* Light text color for buttons in dark mode */
+  }
+}
+
 .survey-container {
-  background-color: #e6f7e6; /* Light green background */
+  background-color: var(--background-color);
   padding: 20px;
   max-width: 600px; /* Adjusted for larger buttons */
   margin: 20px auto;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.survey-title {
+  color: var(--text-color); /* Apply the text color variable */
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .form-group {
@@ -15,6 +39,7 @@
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
+  color: var(--text-color); /* Using variable for text color */
 }
 
 .feelings-container {
@@ -28,7 +53,8 @@
   padding: 15px 20px; /* Increased padding for larger buttons */
   margin: 10px; /* Larger margin for spacing */
   border: 1px solid #ccc;
-  background-color: #f8f8f8;
+  background-color: var(--button-bg-color); /* Using variable for button background */
+  color: var(--button-text-color); /* Using variable for button text color */
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s;
   border-radius: 6px; /* Slightly rounded corners */
@@ -42,20 +68,13 @@
   border-color: #7fa07f;
 }
 
-#custom-feeling {
+#custom-feeling, #comments {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-top: 10px; /* Added margin for spacing */
-}
-
-#comments {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-top: 10px; /* Added margin for spacing */
+  color: var(--text-color); /* Using variable for text color */
 }
 
 button[type="submit"] {
