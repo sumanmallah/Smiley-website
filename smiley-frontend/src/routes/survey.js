@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Correct import statement for useNavigate
 import '../css/survey.css';
 
 function Survey() {
   const [selectedFeeling, setSelectedFeeling] = useState('');
   const [customFeeling, setCustomFeeling] = useState('');
   const [comments, setComments] = useState('');
+  const navigate = useNavigate();
 
   const feelings = {
     'Happy': '😊',
@@ -42,6 +44,11 @@ function Survey() {
     const existingLog = JSON.parse(localStorage.getItem('surveyLog')) || [];
     existingLog.push(surveyData);
     localStorage.setItem('surveyLog', JSON.stringify(existingLog));
+
+    // Redirect to recommendation page with survey data
+    navigate('/recommendation', { state: { feeling: feelingToSubmit, comments } });
+  
+  
   };
 
   return (
