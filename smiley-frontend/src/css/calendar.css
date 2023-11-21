@@ -1,25 +1,41 @@
+/* calendar.css */
+
+/* Style for the container that holds the calendar */
 .my-data-container {
+  padding-top: 30px;
   display: flex;
   justify-content: center;
+  align-items: flex-start; /* Change to align the calendar at the top */
+  min-height: 100vh; /* Ensure the container takes at least the viewport height */
+  background-color: #f0f0f0; /* Set the background color */
 }
 
-.react-calendar__month-view__days__day--weekend:not(
-    .react-calendar__month-view__days__day--neighboringMonth
-  ) {
-  color: black !important;
-}
-/*
- * Calendar important days: 
- * Responded-on-this-day, user has submitted a survey on that day, we will highlight
- * NOW: today, we highlight yellow but responsed-on-this-day can override.
- */
-
-.react-calendar__tile--now {
-  background-color: #ff0 !important;
-  color: #000 !important;
+/* Style for the calendar itself */
+.calendar-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px; /* Adjust the maximum width as needed */
+  width: 100%; /* Make the calendar container expand to full width */
 }
 
-.calendar-ACCESSIBILITY-responded-on-this-day {
-  background-color: #0ff !important;
-  color: #000 !important;
-} /* Most important styles should be at bottom, this is highest priority */
+/* Style for the event details */
+.event-details {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the event details text */
+.event-details p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+/* Style for N/A text in event details */
+.event-details p:empty::before {
+  content: 'N/A';
+}
