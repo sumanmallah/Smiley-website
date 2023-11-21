@@ -53,7 +53,7 @@ function Survey() {
 
   return (
     <div className="survey-container">
-      <h2>Welcome to Smiley Survey!</h2>
+      <h2 className="survey-title">Welcome to Smiley Survey!</h2>
       <form id="survey-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label>How are you feeling today?</label>

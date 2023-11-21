@@ -89,16 +89,24 @@ a {
 }
 
 
-/* In your CSS file (e.g., footer.css) */
+/* Default styles for the footer */
 .footer {
-  position: static;
-  background-color: lightgreen; /* Background color */
-  color:black; /* Text color */
-  text-align: center; /* Center-align text */
-  padding: 10px; /* Add padding for spacing */
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
+  background-color: lightgreen;
+  color: white;
+  padding: 10px;
+}
+
+/* Media query to make footer sticky only on larger screens */
+@media (min-height: 600px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
 }
 
 .router-app-content-wrap {

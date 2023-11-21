@@ -43,6 +43,7 @@ function EventCalendar() {
           <div className='event-details'>
             <p>Comments: {selectedEvent.comments || 'N/A'}</p>
             <p>Feeling: {selectedEvent.feeling || 'N/A'}</p>
+            <p>Time: {Date(selectedEvent.timestamp).toLocaleTimeString()} </p>
           </div>
         )}
         
