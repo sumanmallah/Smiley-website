@@ -10,7 +10,8 @@ const resources = {
       nav_contact_us_button: 'Contact Us',
       //nav_toggle_button: 'Toggle',
       nav_my_userdata_button: 'My Data',
-      nav_survey_ethan1_button: 'EthanTestSurvey',
+      nav_survey_ethan1_button: 'EthanCameraSurvey',
+      nav_survey_ethan2_button: 'EthanMicrophoneSurvey',
       page_not_found_message: 'Error 404: Page Not Found',
 
       choose: "Choose...",
