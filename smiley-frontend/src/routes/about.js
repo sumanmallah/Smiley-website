@@ -1,14 +1,13 @@
 import React from 'react';
 import '../css/about.css';
-
+import { useTranslation } from 'react-i18next';
 function About() {
+  const { t } = useTranslation();
   return (
     <div className="about-container">
       <h1 id="about-header" className="about-header">About Us</h1>
 
-      <p id="welcome-text">
-        Welcome to the Smiley website, your trusted companion in navigating the complexities of emotions and enhancing your emotional well-being. Our mission is to assist users in embracing their emotional diversity and motivating them to maintain a positive outlook throughout the day.
-      </p>
+      <p id="welcome-text">{t("welcome_text")}</p>
 
       <h2 id="purpose-header">Our Purpose</h2>
       <p id="purpose-text">

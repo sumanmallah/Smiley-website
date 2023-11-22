@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Correct import statement for useNavigate
 import '../css/survey.css';
+import { useTranslation } from 'react-i18next';
 
 function Survey() {
+  const { t } = useTranslation();
+
   const [selectedFeeling, setSelectedFeeling] = useState('');
   const [customFeeling, setCustomFeeling] = useState('');
   const [comments, setComments] = useState('');
@@ -81,7 +84,7 @@ function Survey() {
         </div>
 
         <div className="form-group">
-          <label htmlFor="comments">Additional Comments:</label>
+          <label htmlFor="comments">{t("survey_comments")}</label>
           <textarea id="comments" name="comments" rows="4" value={comments} onChange={handleCommentsChange} />
         </div>
 
