@@ -17,10 +17,8 @@ function About() {
       <p id="offer-text">
         <strong>{t("EG")}</strong> {t("Smiley_offers")}<br/>
         <strong>{t("DM")}</strong>{t("MOTIVATION")}<br/>
-        <strong>Personalized Resources:</strong> We tailor our recommendations to your unique emotional state. Whether you need self-care tips, relaxation techniques, or a boost in confidence, Smiley has you covered.
-        <br />
-        <strong>Community Support:</strong> Connect with a community of like-minded individuals who are on a journey to enhance their emotional well-being. Share your experiences, gain insights, and provide support to others.
-      </p>
+        <strong>{t("PR")}</strong>{t("personalized_resources")}<br/>
+        <strong>{t("CS")}</strong>{t("community")}</p>
 
       <h2 id="team-header">Our Team</h2>
       <p id="team-text">
