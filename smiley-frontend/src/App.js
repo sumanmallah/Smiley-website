@@ -37,12 +37,6 @@ function Header() {
         <li><a href={`/contact-us`}>
           {t('nav_contact_us_button')}
           </a></li>
-        <li><a href={`/survey-m2`}>
-          {t('nav_survey_ethan1_button')}
-          </a></li>
-        <li><a href={`/survey-t4`}>
-          {t('nav_survey_ethan2_button')}
-          </a></li>
       </ul>
       <OptionsWheel />
     </header>
