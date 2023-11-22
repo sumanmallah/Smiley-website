@@ -14,16 +14,17 @@ function EventCalendar() {
     }
   }, []);
   const setClass = (date) => {
-    const dateObj = events.find(event => {
+    const dateObj = events.filter(event => {
       const eventDate = new Date(event.timestamp);
       return date.getFullYear() === eventDate.getFullYear() &&
              date.getMonth() === eventDate.getMonth() &&
              date.getDate() === eventDate.getDate(); // make sure year, month, and day right. exact time (HH:MM) not important.
     });
-    return dateObj ? 'calendar-ACCESSIBILITY-responded-on-this-day' : '';  // 'event-day' is a custom CSS class - make 
+    if (dateObj === undefined || dateObj.length == 0) return '';
+    return 'calendar-ACCESSIBILITY-responded-on-this-day';  // 'event-day' is a custom CSS class - make 
   };
-    const onDayClick = (day) => {
-    const eventForDay = events.find(event => {
+  const onDayClick = (day) => {
+    const eventForDay = events.filter(event => {
       const eventDate = new Date(event.timestamp);
       return day.getFullYear() === eventDate.getFullYear() &&
              day.getMonth() === eventDate.getMonth() &&
@@ -39,14 +40,16 @@ function EventCalendar() {
         onClickDay={onDayClick}
         tileClassName={({ date, view }) => setClass(date)}
         />
-        {selectedEvent && (
-          <div className='event-details'>
-            <p>Comments: {selectedEvent.comments || 'N/A'}</p>
-            <p>Feeling: {selectedEvent.feeling || 'N/A'}</p>
-            <p>Time: {Date(selectedEvent.timestamp).toLocaleTimeString()} </p>
-          </div>
-        )}
-        
+        {  selectedEvent && (
+              selectedEvent.map((result) => {
+                return <div key={result.timestamp} className='event-details'>
+                        <p>Comments: {result.comments || 'N/A'}</p>
+                        <p>Feeling: {result.feeling || 'N/A'}</p>
+                        <p>Time: {result.timestamp} </p>
+                      </div>
+              })
+            )
+        }
       </div>
     </div>
   );

@@ -1,4 +1,8 @@
 /* calendar.css */
+.react-calendar {
+  position: relative;
+  left: 20%;
+}
 
 /* Style for the container that holds the calendar */
 .my-data-container {
@@ -39,3 +43,29 @@
 .event-details p:empty::before {
   content: 'N/A';
 }
+
+.my-data-container {
+  display: flex;
+  justify-content: center;
+}
+
+.react-calendar__month-view__days__day--weekend:not(
+    .react-calendar__month-view__days__day--neighboringMonth
+  ) {
+  color: black !important;
+}
+/*
+ * Calendar important days: 
+ * Responded-on-this-day, user has submitted a survey on that day, we will highlight
+ * NOW: today, we highlight yellow but responsed-on-this-day can override.
+ */
+
+.react-calendar__tile--now {
+  background-color: #ff0 !important;
+  color: #000 !important;
+}
+
+.calendar-ACCESSIBILITY-responded-on-this-day {
+  background-color: #0ff !important;
+  color: #000 !important;
+} /* Most important styles should be at bottom, this is highest priority */
