@@ -10,7 +10,6 @@ import ContactUs from './routes/contact.js';
 import Recommendation from './routes/recommendation.js';
 import OptionsWheel from './components/options_modal.js';
 import AboutMyData from './routes/calendar.js';
-import SurveyEthan1 from './routes/survey-ethan1.js';
 import './i18n.js';
 import { useTranslation } from 'react-i18next';
 
@@ -55,7 +54,6 @@ const router = createBrowserRouter([
   { path: "/recommendation", element: <Recommendation />, errorElement: <ErrorPage />},
   { path: "/contact-us", element: <ContactUs />, errorElement: <ErrorPage />},
   { path: "/me", element: <AboutMyData />, errorElement: <ErrorPage />},
-  { path: "/survey-m2", element: <SurveyEthan1 />, errorElement: <ErrorPage />},
 ]);
 
 function App() {
