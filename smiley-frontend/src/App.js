@@ -7,7 +7,7 @@ import {
 import About from './routes/about.js';
 import Survey from './routes/survey.js';
 import ContactUs from './routes/contact.js';
-import Recommendation from './routes/Recommendation.js';
+import Recommendation from './routes/recommendation.js';
 import OptionsWheel from './components/options_modal.js';
 import AboutMyData from './routes/calendar.js';
 import SurveyEthan1 from './routes/survey-ethan1.js';
@@ -36,12 +36,6 @@ function Header() {
           </a></li>
         <li><a href={`/contact-us`}>
           {t('nav_contact_us_button')}
-          </a></li>
-        <li><a href={`/survey-m2`}>
-          {t('nav_survey_ethan1_button')}
-          </a></li>
-        <li><a href={`/survey-t4`}>
-          {t('nav_survey_ethan2_button')}
           </a></li>
       </ul>
       <OptionsWheel />
