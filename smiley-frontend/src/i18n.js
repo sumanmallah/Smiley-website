@@ -9,8 +9,6 @@ const resources = {
       nav_survey_button: 'Survey',
       nav_contact_us_button: 'Contact Us',
       nav_my_userdata_button: 'My Data',
-      nav_survey_ethan1_button: 'EthanCameraSurvey',
-      nav_survey_ethan2_button: 'EthanMicrophoneSurvey',
       page_not_found_message: 'Error 404: Page Not Found',
       
       choose: "Choose...",
@@ -47,8 +45,6 @@ const resources = {
       nav_survey_button: 'Encuesta',
       nav_contact_us_button: 'Contáctenos',
       nav_my_userdata_button: 'Mis datos',
-      nav_survey_ethan1_button: 'EncuestaCámaraEthan',
-      nav_survey_ethan2_button: 'EncuestaMicrófonoEthan',
       page_not_found_message: 'Error 404: Página no encontrada',
 
 
@@ -72,7 +68,35 @@ const resources = {
       DM: "Motivación diaria:",
       MOTIVATION: "Brindamos contenido motivacional diario para inspirarlo y elevar su espíritu. Nuestro objetivo es ayudarlo a mantener una mentalidad positiva y mantenerse motivado a lo largo del día."
      }
-  }
+  },
+ar: {
+     translation: {
+       nav_home_button: "الصفحة الرئيسية",
+       nav_about_button: "حول",
+       nav_survey_button: "استطلاع",
+       nav_contact_us_button: "اتصل بنا",
+       nav_my_userdata_button: "بياناتي",
+       page_not_found_message: "خطأ 404: لم يتم العثور على الصفحة",
+       choose: "اختر...",
+       language: "اللغة:",
+       confirm: "تأكيد",
+       cancel: "إغلاق",
+       spanish: "الإسبانية",
+       french: "الفرنسية",
+       showTheDialog: "الإعدادات",
+       youSelected: "لقد حددت",
+       Survey_comments: "تعليقات إضافية:",
+       Welcome_text: "مرحبًا بك في موقع Smiley, رفيقك الموثوق به في التنقل بين تعقيدات العواطف وتعزيز رفاهيتك العاطفية. مهمتنا هي مساعدة المستخدمين على احتضان تنوعهم العاطفي وتحفيزهم على الحفاظ على نظرة إيجابية طوال اليوم." ,
+       AU:"نبذة عنا",
+       OP: "هدفنا",
+       PT: "الحياة عبارة عن رحلة مليئة بمجموعة من المشاعر, ومن الطبيعي تمامًا تجربة مجموعة واسعة من المشاعر يوميًا. ومع ذلك، هناك أوقات يمكن أن تصبح فيها المشاعر السلبية طاغية، أو يبدو الدافع بعيد المنال. في Smiley، نحن نفهم أهمية الرفاهية العاطفية والأثر الإيجابي الذي يمكن أن تحدثه على حياتك. هدفنا هو توفير حلول وموارد مخصصة لمساعدتك في إدارة عواطفك، وتعزيز دوافعك، وفي نهاية المطاف عيش حياة أكثر إشباعًا وإيجابية. نحن نؤمن بذلك كل عاطفة، حتى تلك التي تمثل تحديًا، لها قيمة ويمكن أن تكون نقطة انطلاق نحو النمو الشخصي.",
+       WWO: "ما نقدمه",
+       EG: "التوجيه العاطفي:",
+       Smiley_offers: "يقدم Smiley مجموعة من الأدوات والموارد لمساعدتك على فهم مشاعرك وإدارتها بشكل أفضل. سواء كنت تشعر بالسعادة أو الحزن أو القلق أو أي شيء بينهما, فنحن هنا لإرشادك.",
+       DM: "التحفيز اليومي:",
+       MOTIVATION: "نحن نقدم محتوى تحفيزيًا يوميًا لإلهامك ورفع معنوياتك. هدفنا هو مساعدتك في الحفاظ على عقلية إيجابية والبقاء متحفزًا طوال اليوم."
+     }
+   },
 };
 
 i18n
