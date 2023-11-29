@@ -7,7 +7,6 @@ import {
 import About from './routes/about.js';
 import Survey from './routes/survey.js';
 import ContactUs from './routes/contact.js';
-import Recommendation from './routes/Recommendation.js';
 import OptionsWheel from './components/options_modal.js';
 import AboutMyData from './routes/calendar.js';
 import SurveyEthan1 from './routes/survey-ethan1.js';
@@ -59,7 +58,6 @@ const router = createBrowserRouter([
   { path: "/", element: <About />, errorElement: <ErrorPage />,},
   { path: "/about", element: <About />, errorElement: <ErrorPage />, },
   { path: "/survey", element: <Survey />, errorElement: <ErrorPage />, },
-  { path: "/recommendation", element: <Recommendation />, errorElement: <ErrorPage />},
   { path: "/contact-us", element: <ContactUs />, errorElement: <ErrorPage />},
   { path: "/me", element: <AboutMyData />, errorElement: <ErrorPage />},
   { path: "/survey-m2", element: <SurveyEthan1 />, errorElement: <ErrorPage />},
