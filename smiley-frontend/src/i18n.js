@@ -10,6 +10,8 @@ const resources = {
       nav_contact_us_button: 'Contact Us',
       nav_my_userdata_button: 'My Data',
       page_not_found_message: 'Error 404: Page Not Found',
+      nav_survey_ethan1_button: "Camera Survey",
+      nav_survey_ethan2_button: "Microphone Survey",
       
       choose: "Choose...",
       language: "Language: ",
@@ -60,6 +62,8 @@ const resources = {
       nav_contact_us_button: 'Contáctenos',
       nav_my_userdata_button: 'Mis datos',
       page_not_found_message: 'Error 404: Página no encontrada',
+      nav_survey_ethan1_button: "Camera Survey",
+      nav_survey_ethan2_button: "Microphone Survey",
 
 
 
