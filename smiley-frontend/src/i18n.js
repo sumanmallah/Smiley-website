@@ -62,10 +62,8 @@ const resources = {
       nav_contact_us_button: 'Contáctenos',
       nav_my_userdata_button: 'Mis datos',
       page_not_found_message: 'Error 404: Página no encontrada',
-      nav_survey_ethan1_button: "Camera Survey",
-      nav_survey_ethan2_button: "Microphone Survey",
-
-
+      nav_survey_ethan1_button: 'Encuesta de Cámara',
+      nav_survey_ethan2_button: 'Encuesta de Micrófono',
 
       choose: "Escoger...",
       language: "Idioma favorito",
@@ -109,6 +107,8 @@ fr: {
       nav_contact_us_button: 'Contactez-nous',
       nav_my_userdata_button: 'Mes données',
       page_not_found_message: 'Erreur 404 : Page non trouvée',
+      nav_survey_ethan1_button: 'Sondage par caméra',
+      nav_survey_ethan2_button: 'Sondage par microphone',
       choose: "Choisir...",
       language: "Langue : ",
       confirm: "Confirmer",
@@ -152,6 +152,8 @@ ar: {
        nav_contact_us_button: "اتصل بنا",
        nav_my_userdata_button: "بياناتي",
        page_not_found_message: "خطأ 404: لم يتم العثور على الصفحة",
+       nav_survey_ethan1_button: 'مسح الكاميرا',
+       nav_survey_ethan2_button: 'مسح الميكروفون',
        choose: "اختر...",
        language: "اللغة:",
        confirm: "تأكيد",
