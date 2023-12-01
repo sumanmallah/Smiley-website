@@ -7,14 +7,6 @@
 }
 
 /* Detect dark mode preference */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text-color: #ddd; /* Light color for dark mode */
-    --background-color: #333; /* Darker background for dark mode */
-    --button-bg-color: #444; /* Dark color for buttons in dark mode */
-    --button-text-color: #fff; /* Light text color for buttons in dark mode */
-  }
-}
 
 .survey-container {
   background-color: var(--background-color);
