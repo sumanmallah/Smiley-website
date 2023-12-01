@@ -66,6 +66,7 @@ function Survey() {
                 key={index}
                 className={`feeling-button ${selectedFeeling === feeling ? 'selected' : ''}`}
                 onClick={() => handleFeelingSelection(feeling)}
+                type="button"
               >
                 {emoji} {feeling}
               </button>

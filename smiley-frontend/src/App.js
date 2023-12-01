@@ -11,6 +11,7 @@ import OptionsWheel from './components/options_modal.js';
 import AboutMyData from './routes/calendar.js';
 import SurveyEthan1 from './routes/survey-ethan1.js';
 import SurveyEthan2 from './routes/survey-ethan2.js';
+import Recommendation from './routes/recommendation.js';
 import './i18n.js';
 import { useTranslation } from 'react-i18next';
 
@@ -62,6 +63,8 @@ const router = createBrowserRouter([
   { path: "/me", element: <AboutMyData />, errorElement: <ErrorPage />},
   { path: "/survey-m2", element: <SurveyEthan1 />, errorElement: <ErrorPage />},
   { path: "/survey-t4", element: <SurveyEthan2 />, errorElement: <ErrorPage />},
+  { path: "/survey-t4", element: <SurveyEthan2 />, errorElement: <ErrorPage />},
+  { path: "/recommendation", element: <Recommendation />, errorElement: <ErrorPage />},
 ]);
 
 function App() {
