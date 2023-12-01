@@ -12,6 +12,7 @@ const resources = {
       page_not_found_message: 'Error 404: Page Not Found',
       nav_survey_ethan1_button: "Camera Survey",
       nav_survey_ethan2_button: "Microphone Survey",
+      copyright: '© 2023',
       
       choose: "Choose...",
       language: "Language: ",
@@ -64,6 +65,7 @@ const resources = {
       page_not_found_message: 'Error 404: Página no encontrada',
       nav_survey_ethan1_button: 'Encuesta de Cámara',
       nav_survey_ethan2_button: 'Encuesta de Micrófono',
+      copyright: '© 2023',
 
       choose: "Escoger...",
       language: "Idioma favorito",
@@ -109,6 +111,8 @@ fr: {
       page_not_found_message: 'Erreur 404 : Page non trouvée',
       nav_survey_ethan1_button: 'Sondage par caméra',
       nav_survey_ethan2_button: 'Sondage par microphone',
+      copyright: '© 2023',
+
       choose: "Choisir...",
       language: "Langue : ",
       confirm: "Confirmer",
@@ -154,6 +158,7 @@ ar: {
        page_not_found_message: "خطأ 404: لم يتم العثور على الصفحة",
        nav_survey_ethan1_button: 'مسح الكاميرا',
        nav_survey_ethan2_button: 'مسح الميكروفون',
+       copyright: '© 2023',
        choose: "اختر...",
        language: "اللغة:",
        confirm: "تأكيد",

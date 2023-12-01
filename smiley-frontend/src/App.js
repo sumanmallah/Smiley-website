@@ -65,13 +65,13 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-
+  const { t } = useTranslation();
   return (
     <React.StrictMode>
 	    <Header />
       <RouterProvider router={router} />
       <footer className="footer">
-        <small>This is our footer; we will add more to it soon</small>
+        <small>{t('copyright')}</small>
       </footer>
     </React.StrictMode>
   );
