@@ -20,10 +20,8 @@ function About() {
         <strong>{t("PR")}</strong>{t("personalized_resources")}<br/>
         <strong>{t("CS")}</strong>{t("community")}</p>
 
-      <h2 id="team-header">Our Team</h2>
-      <p id="team-text">
-        The Smiley team is comprised of dedicated individuals who are passionate about emotional well-being and mental health. We're committed to creating a safe and inclusive space for everyone to explore their feelings and find the motivation they need.
-      </p>
+      <h2 id="team-header">{t("OT")}</h2>
+      <p id="team-text">{t("team_text")}</p>
     </div>
   );
 }
