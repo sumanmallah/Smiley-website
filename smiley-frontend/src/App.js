@@ -8,6 +8,7 @@ import About from './routes/about.js';
 import Survey from './routes/survey.js';
 import ContactUs from './routes/contact.js';
 import Recommendation from './routes/Recommendation.js';
+//import Recommendation from './routes/Recommendation.js';
 import OptionsWheel from './components/options_modal.js';
 import AboutMyData from './routes/calendar.js';
 import './i18n.js';
